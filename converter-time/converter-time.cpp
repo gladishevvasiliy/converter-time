@@ -18,6 +18,6 @@ int main(){
 }
  void convertToHourMinuteSecond(int num, int* hour, int* min, int* sec){
 	*hour = num / 3600;
-	*min = (num - (3600 * *hour)) / 60;
-	*sec = num - 3600 * *hour - 60 * *min;
+	*min = (num % 3600) / 60;
+	*sec = num % 60;
 }
